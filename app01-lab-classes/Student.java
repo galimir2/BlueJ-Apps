@@ -6,9 +6,9 @@ import java.util.*;
  * 
  * @author Michael Kölling and David Barnes
  * @version 2016.02.29
- * Modified by Derek Peacock (2017650)
+ * Modified by Galimir Bozmarov (22014494)
  */
-public class Student
+public class Student extends Course
 {
     // the student's full name
     private String name;
