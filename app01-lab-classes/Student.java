@@ -8,7 +8,7 @@ import java.util.*;
  * @version 2016.02.29
  * Modified by Galimir Bozmarov (22014494)
  */
-public class Student extends Course
+public class Student
 {
     // the student's full name
     private String name;
@@ -80,6 +80,10 @@ public class Student extends Course
         return name.substring(0,4) + id.substring(0,3);
     }
     
+    /**
+     * This method will be used to add a course to a student in which the
+     * student will be enrolled.
+     */
     public void enrolOnCourse(Course course)
     {
         this.course = course;
@@ -92,4 +96,5 @@ public class Student extends Course
     {
         System.out.println(name + ", student ID: " + id + ", credits: " + credits);
     }
+    
 }

@@ -1,33 +1,35 @@
 
 /**
- * Write a description of class Course here.
- *
- * @author (your name)
- * @version (a version number or a date)
+ * In this class there will be stored information about courses in university.
+ * All courses have a title and a code number.
+ * 
+ * @author Galimir Bozmarov
+ * 
+ * @version 1.0 9/10/2020
  */
 public class Course
 {
-    // instance variables - replace the example below with your own
-    private int x;
+    // Attributes
+    private String title;
+    private String codeNumber;
 
     /**
      * Constructor for objects of class Course
+     * it saves the title and the code number
      */
-    public Course()
+    public Course(String title, String codeNumber)
     {
-        // initialise instance variables
-        x = 0;
+        this.title = title;
+        this.codeNumber = codeNumber;
+    }
+    
+    /**
+     * This code is going to print out the title and the codeNumber of the course.
+     *
+     */
+    public void print()
+    { 
+        System.out.println("Course: " + title + " " + codeNumber);
     }
 
-    /**
-     * An example of a method - replace this comment with your own
-     *
-     * @param  y  a sample parameter for a method
-     * @return    the sum of x and y
-     */
-    public int sampleMethod(int y)
-    {
-        // put your code here
-        return x + y;
-    }
 }
