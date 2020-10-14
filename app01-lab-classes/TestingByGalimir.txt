@@ -24,3 +24,4 @@ Galimir, student ID: 12345, credits: 20
 Danny, student ID: 54321, credits: 20
 Vanessa, student ID: 12354, credits: 20
 Number of students: 3
+

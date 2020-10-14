@@ -7,9 +7,9 @@
  * if enough money has been input.
  * 
  * @author David J. Barnes and Michael Kölling
- * @version 2016.02.29
+ * @version 1.0
  * 
- * Modified by Student Name
+ * Modified by Galimir Bozmarov
  */
 public class TicketMachine
 {
@@ -19,6 +19,14 @@ public class TicketMachine
     private int balance;
     // The total amount of money collected by this machine.
     private int total;
+    
+    private Ticket ticket;
+    
+    private Ticket aylesburyTicket;
+    
+    private Ticket highwycombeTicket;
+    
+    private Ticket amershamTicket;
 
     /**
      * Create a machine that issues tickets of the given price.
@@ -28,6 +36,15 @@ public class TicketMachine
         price = cost;
         balance = 0;
         total = 0;
+        
+        aylesburyTicket = new Ticket("Aylesbury", 220);
+        ticket = null;
+        
+        highwycombeTicket = new Ticket("HighWycombe", 330);
+        ticket = null;
+        
+        amershamTicket = new Ticket("Amersham", 300);
+        ticket = null;
     }
 
     /**
@@ -64,6 +81,21 @@ public class TicketMachine
         }
     }
 
+    public void selectAylesbury()
+    {
+        ticket = aylesburyTicket;
+    }
+    
+    public void selectHighWycombe()
+    {
+        ticket = highwycombeTicket;
+    }
+    
+    public void selectAmersham()
+    {
+        ticket = amershamTicket;
+    }
+    
     /**
      * Print a ticket if enough money has been inserted, and
      * reduce the current balance by the ticket price. Print
@@ -75,7 +107,7 @@ public class TicketMachine
         {
             // Simulate the printing of a ticket.
             System.out.println("##################");
-            System.out.println("# The BlueJ Line");
+            System.out.println("# " + ticket);
             System.out.println("# Ticket");
             System.out.println("# " + price + " cents.");
             System.out.println("##################");

@@ -1,0 +1,47 @@
+ticketMachine.selectAylesbury();
+ticketMachine.getPrice()
+    returned int 220
+ticketMachine.insertMoney(220);
+ticketMachine.printTicket();
+##################
+# Ticket@3079d6cf
+# Ticket
+# 220 cents.
+##################
+
+ticketMachine.selectHighWycombe();
+ticketMachine.getPrice()
+    returned int 330
+ticketMachine.insertMoney(400);
+ticketMachine.printTicket();
+##################
+# Ticket@39ec693
+# Ticket
+# 330 cents.
+##################
+
+ticketMachine.getBalance()
+    returned int 70
+ticketMachine.refundBalance()
+    returned int 70
+
+ticketMachine.selectAmersham();
+ticketMachine.getPrice()
+    returned int 300
+ticketMachine.insertMoney(200);
+ticketMachine.printTicket();
+You must insert at least: 100 more cents.
+
+ticketMachine.printTicket();
+##################
+# Ticket@30811da5
+# Ticket
+# 300 cents.
+##################
+
+aylesbury.print();
+TicketAylesbury Price : 220 Date Wed Oct 14 15:06:24 BST 2020
+highwycombe.print();
+TicketHigh Wycombe Price : 300 Date Wed Oct 14 15:06:35 BST 2020
+amersham.print();
+TicketAmersham Price : 330 Date Wed Oct 14 15:06:47 BST 2020
