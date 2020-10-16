@@ -1,19 +1,22 @@
 import java.util.Date;
 /**
- * This will be creating the ticket with destination, price and also date.
+ * This ticket class will be storing information about 
+ * the ticket destination, price and also purchase date.
  *
- * @author Galimir Bozmarov (ID 22014494)
- * @version 1.0
+ * @author Galimir Bozmarov
+ * @version 1.0 9/10/2020
  */
 public class Ticket
 {
-    //Attributes
+    // Attributes
     
     private String destination;
     
+    // The currency will be in pence
     private int price;
     
     private Date dateDay;
+    
     /**
      * Constructor for objects of class Ticket will be including the current
      * date of the system and also the time that the system is showing.
@@ -26,13 +29,26 @@ public class Ticket
         
         dateDay = new Date();
     }
+    
+    public int getPrice()
+    {
+        return price;
+    }
+    
+    public String getDestination()
+    {
+        return destination;
+    }
+    
     /**
      * This is going to be printing the date destinatio and price of
      * the price of the ticket.
      */
     public void print()
     {
-        System.out.println("Ticket" + destination + " Price : " + price +
-         " Date " + dateDay);
+        System.out.println();
+        System.out.println("Ticket:" + destination + " Price:" + price + "pence" +
+         " Date:" + dateDay);
+        System.out.println(); 
     }
 }

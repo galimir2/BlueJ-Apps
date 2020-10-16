@@ -1,47 +1,68 @@
-ticketMachine.selectAylesbury();
-ticketMachine.getPrice()
-    returned int 220
-ticketMachine.insertMoney(220);
-ticketMachine.printTicket();
-##################
-# Ticket@3079d6cf
-# Ticket
-# 220 cents.
-##################
+Ticket amersham = new Ticket("Amersham", 300);
+Ticket aylesbury = new Ticket("Aylesbury", 220);
+Ticket highwycombe = new Ticket("High Wycombe", 330);
+TicketMachine ticketMachine = new TicketMachine();
+ticketMachine.printAllTickets();
+The following three destinations are available
 
-ticketMachine.selectHighWycombe();
-ticketMachine.getPrice()
-    returned int 330
-ticketMachine.insertMoney(400);
-ticketMachine.printTicket();
-##################
-# Ticket@39ec693
-# Ticket
-# 330 cents.
-##################
 
-ticketMachine.getBalance()
-    returned int 70
-ticketMachine.refundBalance()
-    returned int 70
+Ticket:Aylesbury Price:220pence Date:Fri Oct 16 12:29:21 BST 2020
 
+
+
+Ticket:HighWycombe Price:330pence Date:Fri Oct 16 12:29:21 BST 2020
+
+
+
+Ticket:Amersham Price:300pence Date:Fri Oct 16 12:29:21 BST 2020
+
+Please select your ticket destination
 ticketMachine.selectAmersham();
-ticketMachine.getPrice()
-    returned int 300
-ticketMachine.insertMoney(200);
 ticketMachine.printTicket();
-You must insert at least: 100 more cents.
-
+You must insert at least: 300 more cents.
+ticketMachine.insert200pCoin();
+ticketMachine.insert200pCoin();
+ticketMachine.getBalance()
+    returned int 400
+ticketMachine.insert10pCoin();
+ticketMachine.insert20pCoin();
+ticketMachine.insert100pCoin();
+ticketMachine.getBalance()
+    returned int 530
 ticketMachine.printTicket();
 ##################
-# Ticket@30811da5
 # Ticket
+
+Ticket:Amersham Price:300pence Date:Fri Oct 16 12:29:21 BST 2020
+
 # 300 cents.
 ##################
 
-aylesbury.print();
-TicketAylesbury Price : 220 Date Wed Oct 14 15:06:24 BST 2020
-highwycombe.print();
-TicketHigh Wycombe Price : 300 Date Wed Oct 14 15:06:35 BST 2020
-amersham.print();
-TicketAmersham Price : 330 Date Wed Oct 14 15:06:47 BST 2020
+
+ticketMachine.getBalance()
+    returned int 230
+ticketMachine.refundBalance()
+    returned int 230
+ticketMachine.getBalance()
+    returned int 0
+ticketMachine.insertMoney(530);
+ticketMachine.selectAylesbury();
+ticketMachine.printTicket();
+##################
+# Ticket
+
+Ticket:Aylesbury Price:220pence Date:Fri Oct 16 12:29:21 BST 2020
+
+# 220 cents.
+##################
+
+ticketMachine.insert20pCoin();
+ticketMachine.selectHighWycombe();
+ticketMachine.printTicket();
+##################
+# Ticket
+
+Ticket:HighWycombe Price:330pence Date:Fri Oct 16 12:29:21 BST 2020
+
+# 330 cents.
+##################
