@@ -55,6 +55,11 @@ public class TicketMachine
         return balance;
     }
 
+    public void printBalance()
+    {
+        System.out.println();
+    }
+    
     /**
      * Receive an amount of money from a customer.
      * Check that the amount is sensible.
