@@ -1,5 +1,34 @@
-Student galimir = new Student("Galimir", "12345");
-Course cybersecurity = new Course("Cyber Security", "CO452");
+Course cybersecurity = new Course("Cyber Security", "G100");
+Student galimir = new Student("Galimir", "22014494");
 galimir.enrollOnCourse(cybersecurity);
-Module module1 = new Module("Web Development", "WB1234");
-module1.awardMark(50-59);
+Module programming = new Module("Programming Concepts", "CO452");
+Module digitaltech = new Module("Digital Teechnologies and Professional Practice", "CO456");
+Module webdev = new Module("Web Development", "CO456");
+Module computerarch = new Module("Computer Architectures", "CO450");
+
+programming.awardMark(60);
+digitaltech.awardMark(70);
+webdev.awardMark(50);
+computerarch.awardMark(40);
+
+webdev.print();
+Module: Web Development CO456 Mark = 50
+digitaltech.print();
+Module: Digital Teechnologies and Professional Practice CO456 Mark = 70
+programming.print();
+Module: Programming Concepts CO452 Mark = 60
+computerarch.print();
+Module: Computer Architectures CO450 Mark = 40
+
+cybersecurity.addModule(programming, 452);
+cybersecurity.addModule(digitaltech, 456);
+cybersecurity.addModule(webdev, 456);
+cybersecurity.addModule(computerarch, 450);
+
+cybersecurity.print();
+Course Cyber Security - G100
+Modules: 
+Module: CO452 Programming Concepts Mark = -1
+Module: CO454 Digital Technologies and Professional Practice Mark = -1
+Module: CO456 Web Development Mark = -1
+Module: CO450 Computer Architectures Mark = -1
