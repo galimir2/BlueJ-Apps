@@ -1,14 +1,16 @@
-
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.List;
 /**
  * This class stores information about a course
  * that enrolled students may want to complete
  *
- * @author Galimir bozmarov
+ * @author Galimir Bozmarov
  * @version 1.0 23/Oct/2020
  */
 public class Course
 {
-    // instance variables
+     // instance variables
     private String codeNo;
     private String title;
 
@@ -17,9 +19,12 @@ public class Course
     private Module module3;
     private Module module4;
     
+    private ArrayList<Module> modules;
+    
     private int courseMark;
     
-    private String finalGrade;
+    
+    private Grades finalGrade = null;
     
     /**
      * Constructor for objects of class Course
@@ -29,6 +34,8 @@ public class Course
         // initialise instance variables
         this.codeNo = codeNo;
         this.title = title;
+        
+        modules = new ArrayList<Module>();
         
         this.courseMark = 0;
         
@@ -40,9 +47,9 @@ public class Course
     public void createModules()
     {
         module1 = new Module("CO452", "Programming Concepts");
-        module2 = new Module("name", "name");
-        module3 = new Module("name", "name");
-        module4 = new Module("name", "name");
+        module2 = new Module("CO454", "Digital Technologies and Professional Practice");
+        module3 = new Module("CO456", "Web Development");
+        module4 = new Module("CO450", "Computer Architectures");
     }
 
     public void setMark(int mark, String codeNo)
@@ -57,10 +64,10 @@ public class Course
     {
         if(moduleNo == 1)
         {
-            this.module1 = module;
-            this.module2 = module;
-            this.module3 = module;
-            this.module4 = module;
+            this.module1 = module1;
+            this.module2 = module2;
+            this.module3 = module3;
+            this.module4 = module4;
         }
     }
     
@@ -84,6 +91,43 @@ public class Course
         }
     }
     
+    private Grades convertToGrade(int mark)
+    {
+        if((mark >=0) && (mark <39))
+        
+        {
+            return finalGrade.F;
+        }
+        
+        else if((mark >=40) && (mark <49))
+        
+        {
+            return finalGrade.D;
+        }
+        
+        else if((mark >=50) && (mark <59))
+        
+        {
+            return finalGrade.C;
+        }
+        
+        else if((mark >=60) && (mark <69))
+        
+        {
+            return finalGrade.B;
+        }
+        
+        else if((mark >=70) && (mark <100))
+        
+        {
+            return finalGrade.A;
+        }
+        else
+        {
+            return finalGrade.X;
+        }
+     }
+    
     public boolean courseCompleted()
     
     {
@@ -102,12 +146,16 @@ public class Course
     {
         // put your code here
         System.out.println("Course " + codeNo + " - " + title);
+        System.out.println("Modules: ");
+        module1.print();
+        module2.print();
+        module3.print();
+        module4.print();
     }
     
     public void printModules()
     {
-        // is going to print out the final course mak
-        
+        // is going to print out the final course mark
         if(courseCompleted())
         {
             System.out.println("Final Mark: " + courseMark);
