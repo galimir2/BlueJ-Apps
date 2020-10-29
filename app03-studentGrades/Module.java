@@ -2,8 +2,8 @@
 /**
  * Write a description of class Module here.
  *
- * @author (your name)
- * @version (a version number or a date)
+ * @author Galimir Bozmarov
+ * @version 1.0
  */
 public class Module
 {
