@@ -3,7 +3,7 @@
  * Write a description of class Module here.
  *
  * @author Galimir Bozmarov
- * @version 1.0
+ * @version 1.0 23/Oct/2020
  */
 public class Module
 {

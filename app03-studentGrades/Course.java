@@ -27,7 +27,7 @@ public class Course
     private Grades finalGrade = null;
     
     /**
-     * Constructor for objects of class Course
+     * Constructor for all objects of class Course
      */
     public Course(String codeNo, String title)
     {
@@ -91,9 +91,12 @@ public class Course
         }
     }
     
+    /**
+     * This has the marking boundries.
+     */
     private Grades convertToGrade(int mark)
     {
-        if((mark >=0) && (mark <39))
+         if((mark >=0) && (mark <39))
         
         {
             return finalGrade.F;

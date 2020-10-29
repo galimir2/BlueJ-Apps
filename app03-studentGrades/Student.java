@@ -5,7 +5,7 @@ import java.util.*;
  * It holds the student details relevant in our context.
  * 
  * @author Galimir Bozmarov
- * @version 1.0
+ * @version 1.0 23/Oct/2020
  */
 public class Student
 {
