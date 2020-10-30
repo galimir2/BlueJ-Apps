@@ -15,8 +15,7 @@ public class Module
     private int mark;
     
     private int credit;
-    
-    private boolean passed;
+   
     
     private boolean completed;
     
@@ -29,9 +28,9 @@ public class Module
         this.codeNo = codeNo;
         
         mark = -1;
-        credit = 15;
+        credit = 0;
         
-        passed = false;
+        
         completed = false;
     }
     
@@ -44,6 +43,11 @@ public class Module
     {
         return mark;
     }
+    
+    public int getCredit()
+    {
+        return credit;
+    }
 
     public String getCodeNo()
     {
@@ -55,7 +59,12 @@ public class Module
      */
     public boolean isCompleted()
     {
-        return mark >= 0;
+        if (mark >= 40)
+        {
+            credit = 15;
+            return true;
+        }
+        return false;
     }
     
     public void print()

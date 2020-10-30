@@ -23,6 +23,8 @@ public class Course
     
     private int courseMark;
     
+    private int credit;
+    
     
     private Grades finalGrade = null;
     
@@ -36,6 +38,8 @@ public class Course
         this.title = title;
         
         modules = new ArrayList<Module>();
+        
+        this.credit = 0;
         
         this.courseMark = 0;
         
@@ -83,6 +87,9 @@ public class Course
         
            courseMark = courseMark / 4;
         
+           credit = module1.getCredit() + module2.getCredit() + module3.getCredit() +
+           module4.getCredit();
+           
            print();
         }
         else
@@ -134,8 +141,8 @@ public class Course
     public boolean courseCompleted()
     
     {
-        if((module1.isCompleted()) && (module2.isCompleted()) && (module3.isCompleted()) 
-        && (module4.isCompleted()))
+        if((module1.isCompleted()) && (module2.isCompleted()) && 
+            (module3.isCompleted()) && (module4.isCompleted()))
         {
             return true;
         }
@@ -157,12 +164,15 @@ public class Course
         // is going to print out the final course mark
         if(courseCompleted())
         {
-        System.out.println("Modules: ");
-        module1.print();
-        module2.print();
-        module3.print();
-        module4.print();
+            System.out.println("Modules: ");
+            module1.print();
+            module2.print();
+            module3.print();
+            module4.print();
+            
             System.out.println("Final Mark: " + courseMark);
+            System.out.println("Final Grade: " + convertToGrade(courseMark));
+            System.out.println("Final Credit: " + credit);
         }
     }
 }
