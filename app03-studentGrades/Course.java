@@ -96,7 +96,7 @@ public class Course
      */
     private Grades convertToGrade(int mark)
     {
-         if((mark >=0) && (mark <39))
+       if((mark >=0) && (mark <39))
         
         {
             return finalGrade.F;
@@ -149,11 +149,7 @@ public class Course
     {
         // put your code here
         System.out.println("Course " + codeNo + " - " + title);
-        System.out.println("Modules: ");
-        module1.print();
-        module2.print();
-        module3.print();
-        module4.print();
+
     }
     
     public void printModules()
@@ -161,6 +157,11 @@ public class Course
         // is going to print out the final course mark
         if(courseCompleted())
         {
+        System.out.println("Modules: ");
+        module1.print();
+        module2.print();
+        module3.print();
+        module4.print();
             System.out.println("Final Mark: " + courseMark);
         }
     }
