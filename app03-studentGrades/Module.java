@@ -7,7 +7,7 @@
  */
 public class Module
 {
-    // Fields
+    // Attributes
     private String title;
     
     private String codeNo;
@@ -16,11 +16,10 @@ public class Module
     
     private int credit;
    
-    
     private boolean completed;
     
     /**
-     * Constructor for objects of class Module
+     * Constructor for objects of class Module.
      */
     public Module(String title, String codeNo)
     {
@@ -55,7 +54,7 @@ public class Module
     }
     
     /**
-     *  This will return a mark if its greater or equal to 0 when the course is completed.
+     *  This will return a mark if its greater or equal to 40 when the course is completed.
      */
     public boolean isCompleted()
     {
@@ -67,6 +66,9 @@ public class Module
         return false;
     }
     
+    /**
+     *  This will print out the details of the module.
+     */
     public void print()
     {
         System.out.println("Module: " + title + " " + codeNo + " Mark = " + mark);

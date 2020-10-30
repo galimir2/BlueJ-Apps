@@ -68,14 +68,29 @@ public class Course
     {
         if(moduleNo == 1)
         {
-            this.module1 = module1;
-            this.module2 = module2;
-            this.module3 = module3;
-            this.module4 = module4;
+            this.module1 = module;
+        }
+        
+        else if(moduleNo == 2)
+        {
+            this.module2 = module;
+        }
+        
+        else if(moduleNo == 3)
+        {
+            this.module3 = module;
+        }
+        
+        else if(moduleNo == 4)
+        {
+            this.module4 = module;
         }
     }
     
-    
+    /**
+     *  This calculates the overall mark from the 4 modules, 
+     *  and also the overall credit.
+     */
     public void calculateCourseMark()
     {
         if(courseCompleted())
@@ -103,7 +118,7 @@ public class Course
      */
     private Grades convertToGrade(int mark)
     {
-       if((mark >=0) && (mark <39))
+        if((mark >=0) && (mark <39))
         
         {
             return finalGrade.F;
@@ -138,7 +153,7 @@ public class Course
         }
      }
     
-    public boolean courseCompleted()
+     public boolean courseCompleted()
     
     {
         if((module1.isCompleted()) && (module2.isCompleted()) && 
@@ -154,14 +169,13 @@ public class Course
      */
     public void print()
     {
-        // put your code here
         System.out.println("Course " + codeNo + " - " + title);
 
     }
     
     public void printModules()
     {
-        // is going to print out the final course mark
+        // is going to print out the final course mark, grade and credit
         if(courseCompleted())
         {
             System.out.println("Modules: ");
