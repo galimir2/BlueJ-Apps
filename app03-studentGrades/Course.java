@@ -105,7 +105,7 @@ public class Course
            credit = module1.getCredit() + module2.getCredit() + module3.getCredit() +
            module4.getCredit();
            
-           print();
+           printCourseDetailsAndModules();
         }
         else
         {
@@ -165,25 +165,27 @@ public class Course
     }
     
     /**
-     * Prints out the details of a course
+     * Prints out the details of a course and the Modules.
      */
-    public void print()
+    public void printCourseDetailsAndModules()
     {
         System.out.println("Course " + codeNo + " - " + title);
-
+        
+        System.out.println("Modules: ");
+        module1.print();
+        module2.print();
+        module3.print();
+        module4.print();
     }
     
-    public void printModules()
+    /**
+     * Prints out the Finald Mark, Grade and Credits.
+     */
+    public void printFinalMarkGradeAndCredit()
     {
         // is going to print out the final course mark, grade and credit
         if(courseCompleted())
-        {
-            System.out.println("Modules: ");
-            module1.print();
-            module2.print();
-            module3.print();
-            module4.print();
-            
+        {           
             System.out.println("Final Mark: " + courseMark);
             System.out.println("Final Grade: " + convertToGrade(courseMark));
             System.out.println("Final Credit: " + credit);
