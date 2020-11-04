@@ -1,0 +1,186 @@
+StockManager manager = new StockManager();
+StockDemo stockDem1 = new StockDemo(manager);
+manager.printAllProducts();
+111: Apple iPhone XS stock level: 0
+112: Samsung Galaxy S8 stock level: 0
+113: Apple iPhone 11 stock level: 0
+114: Apple iPhone 12 stock level: 0
+115: Apple iPhone 11 Pro stock level: 0
+116: Samsung Galaxy S20 stock level: 0
+117: Samsung Galaxy S10 stock level: 0
+118: Apple iPhone SE stock level: 0
+119: Apple MacBook Pro stock level: 0
+120: Apple iPhone 8 stock level: 0
+
+StockManager manager = new StockManager();
+StockDemo stockDem1 = new StockDemo(manager);
+manager.delivery(111, 2);
+Product Thats Delivered: 111: Apple iPhone XS stock level: 2
+manager.delivery(112, 3);
+Product Thats Delivered: 112: Samsung Galaxy S8 stock level: 3
+manager.delivery(115, 5);
+Product Thats Delivered: 115: Apple iPhone 11 Pro stock level: 5
+manager.delivery(113, 10);
+Product Thats Delivered: 113: Apple iPhone 11 stock level: 10
+manager.delivery(114, 1);
+Product Thats Delivered: 114: Apple iPhone 12 stock level: 1
+manager.delivery(117, 10);
+Product Thats Delivered: 116: Samsung Galaxy S20 stock level: 10
+manager.delivery(118, 5);
+Product Thats Delivered: 116: Samsung Galaxy S20 stock level: 5
+manager.delivery(120, 5);
+Product Thats Delivered: 116: Samsung Galaxy S20 stock level: 5
+manager.delivery(119, 4);
+Product Thats Delivered: 116: Samsung Galaxy S20 stock level: 4
+manager.delivery(117, 3);
+Product Thats Delivered: 116: Samsung Galaxy S20 stock level: 13
+manager.delivery(121, 1);
+Product ID: 121 Has not been found!
+
+manager.printAllProducts();
+111: Apple iPhone XS stock level: 3
+112: Samsung Galaxy S8 stock level: 3
+113: Apple iPhone 11 stock level: 10
+114: Apple iPhone 12 stock level: 1
+115: Apple iPhone 11 Pro stock level: 5
+116: Samsung Galaxy S20 stock level: 0
+117: Samsung Galaxy S10 stock level: 13
+118: Apple iPhone SE stock level: 5
+119: Apple MacBook Pro stock level: 4
+120: Apple iPhone 8 stock level: 5
+
+stockDem1.demoDelivery();
+111: Apple iPhone XS stock level: 0
+112: Samsung Galaxy S8 stock level: 0
+113: Apple iPhone 11 stock level: 0
+114: Apple iPhone 12 stock level: 0
+115: Apple iPhone 11 Pro stock level: 0
+116: Samsung Galaxy S20 stock level: 0
+117: Samsung Galaxy S10 stock level: 0
+118: Apple iPhone SE stock level: 0
+119: Apple MacBook Pro stock level: 0
+120: Apple iPhone 8 stock level: 0
+Product Thats Delivered: 111: Apple iPhone XS stock level: 5
+Product Thats Delivered: 112: Samsung Galaxy S8 stock level: 2
+Product Thats Delivered: 113: Apple iPhone 11 stock level: 4
+Product Thats Delivered: 114: Apple iPhone 12 stock level: 1
+Product Thats Delivered: 115: Apple iPhone 11 Pro stock level: 7
+Product Thats Delivered: 116: Samsung Galaxy S20 stock level: 10
+Product Thats Delivered: 117: Samsung Galaxy S10 stock level: 2
+Product Thats Delivered: 118: Apple iPhone SE stock level: 4
+Product Thats Delivered: 119: Apple MacBook Pro stock level: 8
+Product Thats Delivered: 120: Apple iPhone 8 stock level: 1
+111: Apple iPhone XS stock level: 5
+112: Samsung Galaxy S8 stock level: 2
+113: Apple iPhone 11 stock level: 4
+114: Apple iPhone 12 stock level: 1
+115: Apple iPhone 11 Pro stock level: 7
+116: Samsung Galaxy S20 stock level: 10
+117: Samsung Galaxy S10 stock level: 2
+118: Apple iPhone SE stock level: 4
+119: Apple MacBook Pro stock level: 8
+120: Apple iPhone 8 stock level: 1
+
+stockDem1.demoDelivery();
+111: Apple iPhone XS stock level: 5
+112: Samsung Galaxy S8 stock level: 2
+113: Apple iPhone 11 stock level: 4
+114: Apple iPhone 12 stock level: 1
+115: Apple iPhone 11 Pro stock level: 7
+116: Samsung Galaxy S20 stock level: 10
+117: Samsung Galaxy S10 stock level: 2
+118: Apple iPhone SE stock level: 4
+119: Apple MacBook Pro stock level: 8
+120: Apple iPhone 8 stock level: 1
+Product Thats Delivered: 111: Apple iPhone XS stock level: 10
+Product Thats Delivered: 112: Samsung Galaxy S8 stock level: 4
+Product Thats Delivered: 113: Apple iPhone 11 stock level: 8
+Product Thats Delivered: 114: Apple iPhone 12 stock level: 2
+Product Thats Delivered: 115: Apple iPhone 11 Pro stock level: 14
+Product Thats Delivered: 116: Samsung Galaxy S20 stock level: 20
+Product Thats Delivered: 117: Samsung Galaxy S10 stock level: 4
+Product Thats Delivered: 118: Apple iPhone SE stock level: 8
+Product Thats Delivered: 119: Apple MacBook Pro stock level: 16
+Product Thats Delivered: 120: Apple iPhone 8 stock level: 2
+111: Apple iPhone XS stock level: 10
+112: Samsung Galaxy S8 stock level: 4
+113: Apple iPhone 11 stock level: 8
+114: Apple iPhone 12 stock level: 2
+115: Apple iPhone 11 Pro stock level: 14
+116: Samsung Galaxy S20 stock level: 20
+117: Samsung Galaxy S10 stock level: 4
+118: Apple iPhone SE stock level: 8
+119: Apple MacBook Pro stock level: 16
+120: Apple iPhone 8 stock level: 2
+
+manager.sellProduct(111);
+111: Apple iPhone XS stock level: 10
+111: Apple iPhone XS stock level: 9
+
+manager.sellProduct(112);
+112: Samsung Galaxy S8 stock level: 4
+112: Samsung Galaxy S8 stock level: 3
+
+manager.sellProduct(112);
+112: Samsung Galaxy S8 stock level: 3
+112: Samsung Galaxy S8 stock level: 2
+
+manager.sellProduct(120);
+120: Apple iPhone 8 stock level: 2
+120: Apple iPhone 8 stock level: 1
+
+manager.sellProduct(111);
+111: Apple iPhone XS stock level: 9
+111: Apple iPhone XS stock level: 8
+
+manager.sellProduct(114);
+114: Apple iPhone 12 stock level: 2
+114: Apple iPhone 12 stock level: 1
+
+manager.sellProduct(115);
+115: Apple iPhone 11 Pro stock level: 14
+115: Apple iPhone 11 Pro stock level: 13
+
+manager.sellProduct(116);
+116: Samsung Galaxy S20 stock level: 20
+116: Samsung Galaxy S20 stock level: 19
+
+manager.sellProduct(117);
+117: Samsung Galaxy S10 stock level: 4
+117: Samsung Galaxy S10 stock level: 3
+
+manager.sellProduct(119);
+119: Apple MacBook Pro stock level: 16
+119: Apple MacBook Pro stock level: 15
+
+manager.removeProduct(111);
+manager.printAllProducts();
+112: Samsung Galaxy S8 stock level: 4
+113: Apple iPhone 11 stock level: 8
+114: Apple iPhone 12 stock level: 2
+115: Apple iPhone 11 Pro stock level: 14
+116: Samsung Galaxy S20 stock level: 20
+117: Samsung Galaxy S10 stock level: 4
+118: Apple iPhone SE stock level: 8
+119: Apple MacBook Pro stock level: 16
+120: Apple iPhone 8 stock level: 2
+
+manager.changeName(111, "Apple Smartwatch 4");
+manager.printAllProducts();
+111: Apple Smartwatch 4 stock level: 0
+
+manager.printLowStock();
+The stock of those products is low.
+112: Samsung Galaxy S8 stock level: 2
+114: Apple iPhone 12 stock level: 1
+117: Samsung Galaxy S10 stock level: 2
+120: Apple iPhone 8 stock level: 1
+
+manager.searchProduct("iPhone");
+111: Apple iPhone XS stock level: 5
+113: Apple iPhone 11 stock level: 4
+114: Apple iPhone 12 stock level: 1
+115: Apple iPhone 11 Pro stock level: 7
+118: Apple iPhone SE stock level: 4
+120: Apple iPhone 8 stock level: 1
+
