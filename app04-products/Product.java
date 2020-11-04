@@ -44,7 +44,7 @@ public class Product
         return name;
     }
     
-        /**
+       /**
      * This will be used to change the name of a product
      * based on the id.
      */

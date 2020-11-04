@@ -5,8 +5,8 @@ import java.util.*;
  * Manage the stock in a business.
  * The stock is described by zero or more Products.
  * 
- * @author (your name) 
- * @version (a version number or a date)
+ * @author Galimir Bozmarov
+ * @version 1.0 04/11/2020
  */
 public class StockManager
 {
@@ -32,7 +32,7 @@ public class StockManager
         stock.add(item);
     }
     
-        /**
+     /**
      * This will be used to change the name of a product
      * based on the id.
      */
@@ -61,7 +61,7 @@ public class StockManager
         }
         else
         {
-            System.out.println("Product has not been found");
+            System.out.println("Product has not been found!");
         }
     }
     
@@ -80,7 +80,7 @@ public class StockManager
                 listProduct.add(product);
             }
         }
-        printAllProducts();
+        printListProduct();
     }
     
     /**
@@ -173,7 +173,7 @@ public class StockManager
         }
         
         System.out.println("The stock of those products is low.");
-        printAllProducts();
+        printListProduct();
     }
     
     /**
@@ -189,13 +189,24 @@ public class StockManager
     }
 
     /**
-     * Print details of all the products.
+     * Prints listProduct.
      */
-    public void printAllProducts()
+    public void printListProduct()
     {
         listProduct.forEach(product ->
         {
             System.out.println(product);
         });
+    }
+    
+    /**
+     * Print the details of all products.
+     */
+    public void printAllProducts()
+    {
+        for(Product product : stock)
+        {
+            System.out.println(product);
+        }
     }
 }
