@@ -2,8 +2,9 @@
 /**
  * Write a description of class Program here.
  *
- * @author (your name)
- * @version (a version number or a date)
+ * @author Galimir Bozmarov
+ * @version (13/11/2020)
+ * @modified by Galimir Bzomarov
  */
 public class Program
 {
