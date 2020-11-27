@@ -4,8 +4,8 @@
  * stock manager so that users can add, edit,
  * print and remove stock products
  *
- * @author Student Name
- * @version 0.1
+ * @author Galimir Bozmarov
+ * @version 1.0
  */
 public class StockApp
 {
@@ -61,7 +61,7 @@ public class StockApp
         String value = input.getString();
         int id = Integer.parseInt(value);
         
-        System.out.println("Please enter the neame of the product");
+        System.out.println("Please enter the name of the product");
         String name = input.getString();
         
         Product product = new Product(id, name);
