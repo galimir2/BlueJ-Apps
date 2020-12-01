@@ -1,19 +1,20 @@
 import java.util.ArrayList;
 import java.util.*;
+
 /**
  * Manage the stock in a business.
  * The stock is described by zero or more Products.
  * 
- * @author Galimir Bozmarov (22014494) 
- * @version 13/11/2020
+ * @author Galimir Bozmarov
+ * @version 1.0 04/11/2020
  */
 public class StockManager
 {
     // A list of the products.
     private ArrayList<Product> stock;
+    // List used for calcualtions
+    List <Product> listProduct = new ArrayList<Product>();
     
-    List <Product> listStock = new ArrayList<Product>();
-
     /**
      * Initialise the stock manager.
      */
@@ -41,109 +42,79 @@ public class StockManager
         }
     }
     
-    /**
-     * Receive a delivery of a particular product.
-     * Increase the quantity of the product by the given amount.
-     * @param id The ID of the product.
-     * @param amount The amount to increase the quantity by.
+     /**
+     * This will be used to change the name of a product
+     * based on the id.
      */
-    public void delivery(int id, int amount)
+    public void changeName(int id, String replacementName)
     {
-        //this method is for delivering the stock of the products
         Product product = findProduct(id);
-        if(product != null)
+        if (product !=null)
         {
-            product.increaseQuantity(amount);
-            System.out.println("Product Delivered: " + product);
+            product.replaceName(replacementName);
         }
         else
         {
-            System.out.println("Product ID " + id + " was not found");
-        }
-        
-    }
-    
-    /**
-     * Replacing the name of the products
-     */
-    public void newProductName(int id, String newProduct)
-    {
-        // this method will be to change the name of a desired product
-        Product product = findProduct(id);
-        if(product != null)
-        {
-            product.changeName(newProduct);
-        }
-        else
-        {
-            System.out.println("This Product DOES NOT Exist");
+            System.out.println("Product has not been found!");
         }
     }
     
     /**
-     * Removing product from stock list
+     * This will remove a product from the list.
      */
     public void removeProduct(int id)
     {
         Product product = findProduct(id);
-        if(product !=null)
+        if (product != null)
         {
             stock.remove(product);
         }
         else
         {
-            System.out.println("This Product HAS NOT been found!!");
+            System.out.println("Product has not been found!");
         }
     }
     
     /**
-     * Method for selling an item of your choice
+     * This will search for a product by specific word 
+     * from the name of the product.
      */
-        public void sellProduct(int id)
+    public void searchProduct(String word)
     {
-        Product product = findProduct(id);
+        listProduct.clear();
         
-        if(product != null) 
+        for(Product product : stock)
         {
-            printDetails(id);
-            product.sellOne();
-            printDetails(id);
-        }
-    }
-    
-     /**
-      *  Gathering the information about the items which
-      *  have a low stock level
-      */
-     public void printLowInStock()
-    {
-        listStock.clear();
-        
-        for (Product product : stock)
-        {
-            if (product.checkLow() == true)
+            if(product.getName().contains(word))
             {
-                listStock.add(product);
+                listProduct.add(product);
             }
         }
-        System.out.println("The Following Products Have Low Stock:~");
-        printListStock();
+        printListProduct();
     }
     
     /**
-     * printing listStock
+     * This will receive a delivery and will increase the stock amount.
+     * @param id is the product ID.
+     * @param amount is the amount that is in stock.
      */
-    public void printListStock()
+    public void delivery(int id, int amount)
     {
-        listStock.forEach(product ->
+        Product product = findProduct(id);
+        if(product !=null)
         {
-            System.out.println(product);
-        });
+            product.increaseQuantity(amount);
+            System.out.println("Product Thats Delivered: " + product); 
+        }
+        else
+        {
+            System.out.println("Product ID: " + id + " Has not been found!");
+        }
     }
     
-    /**
-     * Show details of the given product. If the product is found,
-     * the name and stock quantity will be shown.
+       /**
+     * Show details of the given product. If found,
+     * its name and stock quantity will be shown.
      * @param id The ID of the product to look for.
      */
     public void printDetails(int id)
@@ -153,6 +124,27 @@ public class StockManager
         if(product != null) 
         {
             System.out.println(product.toString());
+        }
+    }
+    
+       /**
+     * Sell one of the given item.
+     * Show the before and after status of the product.
+     * @param id The ID of the product being sold.
+     */
+    public void sellProduct(int id)
+    {
+        Product product = findProduct(id);
+        
+        if(product != null) 
+        {
+            printDetails(id);
+            product.sellOne();
+            printDetails(id);
+        }
+        else
+        {
+            System.out.println("Product ID: " + id + " is not in stock");
         }
     }
     
@@ -170,23 +162,28 @@ public class StockManager
                 return product;
             }
         }
+        
         return null;
     }
     
     /**
-     * Searching for a product by their name
+     * This will print a list of the products with
+     * quantity less than 3.
      */
-    public void searchProductKeyword(String keyword)
+    public void printLowStock()
     {
-        listStock.clear();
-        for(Product product : stock)
+        listProduct.clear();
+        
+        for (Product product : stock)
         {
-            if(product.getName().contains(keyword))
+            if(product.checkLow() == true)
             {
-                listStock.add(product);
+                listProduct.add(product);
             }
         }
-        printListStock();
+        
+        System.out.println("The stock of those products is low.");
+        printListProduct();
     }
     
     /**
@@ -202,7 +199,18 @@ public class StockManager
     }
 
     /**
-     * Print details of all the products.
+     * Prints listProduct.
+     */
+    public void printListProduct()
+    {
+        listProduct.forEach(product ->
+        {
+            System.out.println(product);
+        });
+    }
+    
+    /**
+     * Print the details of all products.
      */
     public void printAllProducts()
     {

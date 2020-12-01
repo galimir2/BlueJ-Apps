@@ -10,7 +10,8 @@ public class StockDemo
 {
     // The stock manager.
     private StockManager manager;
-
+    
+    
     /**
      * Create a StockManager and populate it with a few
      * sample products.
@@ -20,17 +21,16 @@ public class StockDemo
        //this method adds the products 
        this.manager = manager;
         
-       manager.addProduct(new Product(101, "Sony PlayStation 5"));
-       manager.addProduct(new Product(102, "Xbox Series X"));
-       manager.addProduct(new Product(103, "Xbox Series S"));
-       manager.addProduct(new Product(104, "Apple iPhone 12"));
-       manager.addProduct(new Product(105, "Apple iPhone 12 Pro"));
-       manager.addProduct(new Product(106, "Apple iPhone SE"));
-       manager.addProduct(new Product(107, "Apple AirPods (2nd Generation)"));
-       manager.addProduct(new Product(108, "Apple AirPods Pro"));
-       manager.addProduct(new Product(109, "Samsung Galaxy Z Fold2 5G"));
-       manager.addProduct(new Product(110, "Samsung Galaxy S20 5G"));
-       manager.addProduct(new Product(111, "Samsung Galaxy Note20 5G"));
+        manager.addProduct(new Product(111, "Apple iPhone XS"));
+        manager.addProduct(new Product(112, "Samsung Galaxy S8"));
+        manager.addProduct(new Product(113, "Apple iPhone 11"));
+        manager.addProduct(new Product(114, "Apple iPhone 12"));
+        manager.addProduct(new Product(115, "Apple iPhone 11 Pro"));
+        manager.addProduct(new Product(116, "Samsung Galaxy S20"));
+        manager.addProduct(new Product(117, "Samsung Galaxy S10"));
+        manager.addProduct(new Product(118, "Apple iPhone SE"));
+        manager.addProduct(new Product(119, "Apple MacBook Pro"));
+        manager.addProduct(new Product(120, "Apple iPhone 8"));
     }
     
    /**
@@ -38,7 +38,7 @@ public class StockDemo
      * might be used. Details of one product are shown, the
      * product is restocked, and then the details are shown again.
      */
-    public void demo()
+    public void demoDelivery()
     {
         // Show details of all of the products.
         manager.printAllProducts();

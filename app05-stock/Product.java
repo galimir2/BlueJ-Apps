@@ -1,8 +1,10 @@
+import java.util.*;
+import java.lang.String;
 /**
  * Model some details of a product sold by a company.
  * 
- * @author David J. Barnes and Michael Kölling.
- * @version 2016.02.29
+ * @author Galimir Bozmarov
+ * @version 1.0 04/11/2020
  */
 public class Product
 {
@@ -42,14 +44,42 @@ public class Product
         return name;
     }
     
-    /**
-     * Set a new name for the product
+       /**
+     * This will be used to change the name of a product
+     * based on the id.
      */
-    public void changeName(String newProductName)
+    public void replaceName(String replacementName)
     {
-        name = newProductName;
+        this.name = replacementName;
     }
-
+    
+    /**
+     * This will check if the stock quantity is low.
+     * If its low it will print out a message.
+     */
+    public void getLow()
+    {
+        if(checkLow() == true)
+        {
+            System.out.println("This product has low amounts of stock: " + id + " " +
+            getQuantity() + " in stock.");
+        }
+    }
+    
+    public boolean checkLow()
+    {
+        int low = 3;
+        
+        if(getQuantity() <= low)
+        {
+            return true;
+        }
+        else
+        {
+            return false;
+        }
+    }
+    
     /**
      * @return The quantity in stock.
      */
@@ -63,7 +93,7 @@ public class Product
      */
     public String toString()
     {
-        return id + ": " +  name + " | stock level: " + quantity;
+        return id + ": " +  name + " stock level: " + quantity;
     }
 
     /**
@@ -82,33 +112,6 @@ public class Product
         {
             System.out.println("Attempt to restock " + name +
                                " with a non-positive amount: " + amount);
-        }
-    }
-    
-    public boolean checkLow()
-    {
-        int low = 4;
-        
-        if(getQuantity() <= low)
-        {
-            return true;
-        }
-        else
-        {
-            return false;
-        }
-    }
-    
-    /**
-     * Check if there is a product with a low stock level
-     * message will be printed if there is
-     */
-    public void getLow()
-    {
-        if(checkLow() == true)
-        {
-            System.out.println("This product has low amounts of stock: " + id + " " +
-            getQuantity());
         }
     }
 

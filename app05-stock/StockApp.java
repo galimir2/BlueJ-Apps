@@ -1,4 +1,5 @@
-
+import java.util.ArrayList;
+import java.util.*;
 /**
  * This app provides a user interface to the
  * stock manager so that users can add, edit,
@@ -13,6 +14,7 @@ public class StockApp
     public static final String QUIT = "quit";
     public static final String ADD = "add";
     public static final String PRINT_ALL = "printall";
+    public static final String SEARCH = "search";
     // Use to get user input
     private InputReader input = new InputReader();
     
@@ -20,7 +22,12 @@ public class StockApp
     
     private StockDemo demo = new StockDemo(manager);
     
-    /**
+    
+    // A list of the products.
+    private ArrayList<Product> stock;
+    List <Product> listProduct = new ArrayList<Product>();
+    
+   /**
      * 
      */
     public void run()
@@ -40,7 +47,7 @@ public class StockApp
         }
     }
     
-    private void executeMenuChoice(String choice)
+   private void executeMenuChoice(String choice)
     {
         if(choice.equals(ADD))
         {
@@ -51,9 +58,13 @@ public class StockApp
             manager.printAllProducts();
             String value = input.getString();
         }
+        else if(choice.equals(SEARCH))
+        {
+            
+        }
     }
     
-    private void addProduct()
+   private void addProduct()
     {
         System.out.println("Adding new product\n");
         
@@ -67,8 +78,22 @@ public class StockApp
         Product product = new Product(id, name);
         manager.addProduct(product);
         
-        
+        System.out.println("\n You have added the following product" + product);
         System.out.println();
+    }
+    
+   /**
+     * This will search for a product by specific word 
+     * from the name of the product.
+     */
+    public void searchProduct(String word)
+    {
+        System.out.println("Searching for an item");
+        
+        System.out.println("Please enter the name of the product");
+        String name = input.getString();
+        
+
     }
     
     /**
@@ -94,5 +119,16 @@ public class StockApp
         System.out.println(" Stock Management Application ");
         System.out.println("      App05: by Galimir");
         System.out.println("******************************");
+    }
+    
+     /**
+     * Prints listProduct.
+     */
+    public void printListProduct()
+    {
+        listProduct.forEach(product ->
+        {
+            System.out.println(product);
+        });
     }
 }
