@@ -76,10 +76,10 @@ public class StockDemo
         
         int amount = 0;
         
-        for(int id = 111; id<=120; id++)
+        for(int id = 111; id<=130; id++)
         {
             amount = generator.nextInt(7) + 1;
-            manager.sellProduct(id);
+            manager.sellProduct(id, amount);
         }
     }
     

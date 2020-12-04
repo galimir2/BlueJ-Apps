@@ -17,6 +17,7 @@ public class StockApp
     public static final String SELL = "sell";
     public static final String DELIVER = "deliver";
     public static final String STOCK = "stock";
+    public static final String REMOVE = "remove";
     // Use to get user input
     private InputReader input = new InputReader();
     
@@ -26,7 +27,7 @@ public class StockApp
     
     
     /**
-     * 
+     * This line of code runs the program.
      */
     public void run()
     {
@@ -45,6 +46,9 @@ public class StockApp
         }
     }
     
+    /**
+     * This will run all the functions by typing the work.
+     */
     private void executeMenuChoice(String choice)
     {
         if(choice.equals(ADD))
@@ -59,6 +63,22 @@ public class StockApp
         else if(choice.equals(SEARCH))
         {
             searchProduct();
+        }
+        else if(choice.equals(SELL))
+        {
+            sellProduct();
+        }
+          else if(choice.equals(DELIVER))
+        {
+            deliverProduct();
+        }
+        else if(choice.equals(STOCK))
+        {
+            lowStock();
+        }
+        else if(choice.equals(REMOVE))
+        {
+            removeProduct();
         }
     }
     
@@ -76,8 +96,6 @@ public class StockApp
         Product product = new Product(id, name);
         manager.addProduct(product);
         
-        System.out.println("\n You have added the following product" + product);
-        System.out.println();
     }
     
     /**
@@ -95,6 +113,64 @@ public class StockApp
     }
     
     /**
+     * method to sell the product(s)
+     */
+    public void sellProduct()
+    {
+        System.out.println("Sell a product\n");
+
+        System.out.println("Please enter the product ID");
+        String value = input.getString();
+        int id = Integer.parseInt(value);
+
+        System.out.println("Please enter the amount you would like to sell");
+        String number = input.getString();
+        int amount = Integer.parseInt(number);
+        
+        manager.sellProduct(id, amount); 
+    }
+    
+    /**
+     * Method to deliver the products
+     */
+    public void deliverProduct()
+    {
+        System.out.println("Sell a product\n");
+
+        System.out.println("Please enter the product ID");
+        String value = input.getString();
+        int id = Integer.parseInt(value);
+        
+        System.out.println("Please enter the amount that must be delivered");
+        String number = input.getString();
+        int amount = Integer.parseInt(number);
+
+        manager.deliverProduct(id, amount); 
+    }
+    
+    /**
+     * This will show all the stock that has low levels.
+     */
+    public void lowStock()
+    {
+        manager.printLowStock();
+    }
+    
+    /**
+     * This will remove an item from the product list.
+     */
+    public void removeProduct()
+    {
+        System.out.println("Remove a Product from the list\n");
+
+        System.out.println("Enter the ID of the product");
+        String value = input.getString();
+        int id = Integer.parseInt(value);
+
+        manager.removeProduct(id);
+    }
+    
+    /**
      * Print out a menu of operation choices
      */
     private void printMenuChoices()
@@ -106,6 +182,7 @@ public class StockApp
         System.out.println("    Deliver:    Deliver products");
         System.out.println("    Remove:     Remove an old product");
         System.out.println("    PrintAll:   Print all products");
+        System.out.println("    Stock:      Prints all products that are all low in stock");
         System.out.println("    Quit:       Quit the program");
         System.out.println();        
     }
