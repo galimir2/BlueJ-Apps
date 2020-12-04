@@ -1,5 +1,4 @@
-import java.util.ArrayList;
-import java.util.*;
+
 /**
  * This app provides a user interface to the
  * stock manager so that users can add, edit,
@@ -15,6 +14,9 @@ public class StockApp
     public static final String ADD = "add";
     public static final String PRINT_ALL = "printall";
     public static final String SEARCH = "search";
+    public static final String SELL = "sell";
+    public static final String DELIVER = "deliver";
+    public static final String STOCK = "stock";
     // Use to get user input
     private InputReader input = new InputReader();
     
@@ -23,11 +25,7 @@ public class StockApp
     private StockDemo demo = new StockDemo(manager);
     
     
-    // A list of the products.
-    private ArrayList<Product> stock;
-    List <Product> listProduct = new ArrayList<Product>();
-    
-   /**
+    /**
      * 
      */
     public void run()
@@ -47,7 +45,7 @@ public class StockApp
         }
     }
     
-   private void executeMenuChoice(String choice)
+    private void executeMenuChoice(String choice)
     {
         if(choice.equals(ADD))
         {
@@ -60,11 +58,11 @@ public class StockApp
         }
         else if(choice.equals(SEARCH))
         {
-            
+            searchProduct();
         }
     }
     
-   private void addProduct()
+    private void addProduct()
     {
         System.out.println("Adding new product\n");
         
@@ -82,18 +80,18 @@ public class StockApp
         System.out.println();
     }
     
-   /**
+    /**
      * This will search for a product by specific word 
      * from the name of the product.
      */
-    public void searchProduct(String word)
+    public void searchProduct()
     {
-        System.out.println("Searching for an item");
+        System.out.println("Search for a product by name\n");
         
-        System.out.println("Please enter the name of the product");
-        String name = input.getString();
+        System.out.println("Please enter the name of the product\n");
+        String word = input.getString();
         
-
+        manager.searchProduct(word);
     }
     
     /**
@@ -103,6 +101,9 @@ public class StockApp
     {
         System.out.println();
         System.out.println("    Add:        Add a new product");
+        System.out.println("    Sell:       Sell a product");
+        System.out.println("    Search:     Search for a product");
+        System.out.println("    Deliver:    Deliver products");
         System.out.println("    Remove:     Remove an old product");
         System.out.println("    PrintAll:   Print all products");
         System.out.println("    Quit:       Quit the program");
@@ -121,14 +122,4 @@ public class StockApp
         System.out.println("******************************");
     }
     
-     /**
-     * Prints listProduct.
-     */
-    public void printListProduct()
-    {
-        listProduct.forEach(product ->
-        {
-            System.out.println(product);
-        });
-    }
 }

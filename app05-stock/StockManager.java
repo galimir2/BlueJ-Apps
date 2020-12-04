@@ -1,6 +1,6 @@
 import java.util.ArrayList;
 import java.util.*;
-
+import java.io.IOException;
 /**
  * Manage the stock in a business.
  * The stock is described by zero or more Products.
@@ -10,6 +10,8 @@ import java.util.*;
  */
 public class StockManager
 {
+    public static final int FIRST_ID = 111;
+    public static final int LAST_ID = 130;
     // A list of the products.
     private ArrayList<Product> stock;
     // List used for calcualtions
@@ -42,7 +44,7 @@ public class StockManager
         }
     }
     
-     /**
+    /**
      * This will be used to change the name of a product
      * based on the id.
      */
@@ -81,16 +83,22 @@ public class StockManager
      */
     public void searchProduct(String word)
     {
-        listProduct.clear();
+        int id = FIRST_ID;
         
-        for(Product product : stock)
+        while(id <= LAST_ID)
         {
-            if(product.getName().contains(word))
+            Product product = findProduct(id);
+            if(product !=null)
             {
-                listProduct.add(product);
+            String name = product.getName().toLowerCase();
+            word = word.toLowerCase();
+            if(name.contains(word))
+            {
+                System.out.println(product);
             }
+            id++;  
+            }            
         }
-        printListProduct();
     }
     
     /**
@@ -98,7 +106,7 @@ public class StockManager
      * @param id is the product ID.
      * @param amount is the amount that is in stock.
      */
-    public void delivery(int id, int amount)
+    public void deliverProduct(int id, int amount)
     {
         Product product = findProduct(id);
         if(product !=null)
@@ -112,7 +120,7 @@ public class StockManager
         }
     }
     
-       /**
+    /**
      * Show details of the given product. If found,
      * its name and stock quantity will be shown.
      * @param id The ID of the product to look for.
@@ -127,7 +135,7 @@ public class StockManager
         }
     }
     
-       /**
+    /**
      * Sell one of the given item.
      * Show the before and after status of the product.
      * @param id The ID of the product being sold.
@@ -162,7 +170,6 @@ public class StockManager
                 return product;
             }
         }
-        
         return null;
     }
     
