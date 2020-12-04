@@ -1,0 +1,273 @@
+ You have added 119: Apple MacBook Pro stock level: 0
+
+ You have added 120: Apple iPhone 8 stock level: 0
+******************************
+ Stock Management Application 
+      App05: by Galimir
+******************************
+
+    Add:        Add a new product
+    Sell:       Sell a product
+    Search:     Search for a product
+    Deliver:    Deliver products
+    Remove:     Remove an old product
+    PrintAll:   Print all products
+    Stock:      Prints all products that are all low in stock
+    Quit:       Quit the program
+
+> remove
+Remove a Product from the list
+
+Enter the ID of the product
+> 113
+******************************
+ Stock Management Application 
+      App05: by Galimir
+******************************
+
+    Add:        Add a new product
+    Sell:       Sell a product
+    Search:     Search for a product
+    Deliver:    Deliver products
+    Remove:     Remove an old product
+    PrintAll:   Print all products
+    Stock:      Prints all products that are all low in stock
+    Quit:       Quit the program
+
+> printall
+111: Apple iPhone XS stock level: 0
+112: Samsung Galaxy S8 stock level: 0
+114: Apple iPhone 12 stock level: 0
+115: Apple iPhone 11 Pro stock level: 0
+116: Samsung Galaxy S20 stock level: 0
+117: Samsung Galaxy S10 stock level: 0
+118: Apple iPhone SE stock level: 0
+119: Apple MacBook Pro stock level: 0
+120: Apple iPhone 8 stock level: 0
+> remove
+******************************
+ Stock Management Application 
+      App05: by Galimir
+******************************
+
+    Add:        Add a new product
+    Sell:       Sell a product
+    Search:     Search for a product
+    Deliver:    Deliver products
+    Remove:     Remove an old product
+    PrintAll:   Print all products
+    Stock:      Prints all products that are all low in stock
+    Quit:       Quit the program
+
+> remove
+Remove a Product from the list
+
+Enter the ID of the product
+> 200
+Product has not been found!
+******************************
+ Stock Management Application 
+      App05: by Galimir
+******************************
+
+    Add:        Add a new product
+    Sell:       Sell a product
+    Search:     Search for a product
+    Deliver:    Deliver products
+    Remove:     Remove an old product
+    PrintAll:   Print all products
+    Stock:      Prints all products that are all low in stock
+    Quit:       Quit the program
+
+> printall
+111: Apple iPhone XS stock level: 0
+112: Samsung Galaxy S8 stock level: 0
+114: Apple iPhone 12 stock level: 0
+115: Apple iPhone 11 Pro stock level: 0
+116: Samsung Galaxy S20 stock level: 0
+117: Samsung Galaxy S10 stock level: 0
+118: Apple iPhone SE stock level: 0
+119: Apple MacBook Pro stock level: 0
+120: Apple iPhone 8 stock level: 0
+> 
+******************************
+ Stock Management Application 
+      App05: by Galimir
+******************************
+
+    Add:        Add a new product
+    Sell:       Sell a product
+    Search:     Search for a product
+    Deliver:    Deliver products
+    Remove:     Remove an old product
+    PrintAll:   Print all products
+    Stock:      Prints all products that are all low in stock
+    Quit:       Quit the program
+
+> deliver
+Sell a product
+
+Please enter the product ID
+> 112
+Please enter the amount that must be delivered
+> 8
+Product Thats Delivered: 112: Samsung Galaxy S8 stock level: 8
+******************************
+ Stock Management Application 
+      App05: by Galimir
+******************************
+
+    Add:        Add a new product
+    Sell:       Sell a product
+    Search:     Search for a product
+    Deliver:    Deliver products
+    Remove:     Remove an old product
+    PrintAll:   Print all products
+    Stock:      Prints all products that are all low in stock
+    Quit:       Quit the program
+
+> deliver
+Sell a product
+
+Please enter the product ID
+> 112
+Please enter the amount that must be delivered
+> -2
+Attempt to restock Samsung Galaxy S8 with a non-positive amount: -2
+Product Thats Delivered: 112: Samsung Galaxy S8 stock level: 8
+******************************
+ Stock Management Application 
+      App05: by Galimir
+******************************
+
+    Add:        Add a new product
+    Sell:       Sell a product
+    Search:     Search for a product
+    Deliver:    Deliver products
+    Remove:     Remove an old product
+    PrintAll:   Print all products
+    Stock:      Prints all products that are all low in stock
+    Quit:       Quit the program
+
+> sell
+Sell a product
+
+Please enter the product ID
+> 112
+Please enter the amount you would like to sell
+> 2
+112: Samsung Galaxy S8 stock level: 8
+You have sold2ofSamsung Galaxy S8
+112: Samsung Galaxy S8 stock level: 6
+******************************
+ Stock Management Application 
+      App05: by Galimir
+******************************
+
+    Add:        Add a new product
+    Sell:       Sell a product
+    Search:     Search for a product
+    Deliver:    Deliver products
+    Remove:     Remove an old product
+    PrintAll:   Print all products
+    Stock:      Prints all products that are all low in stock
+    Quit:       Quit the program
+
+> sell
+Sell a product
+
+Please enter the product ID
+> 112
+Please enter the amount you would like to sell
+> 10
+112: Samsung Galaxy S8 stock level: 6
+You have tried to sell an out of stock item: Samsung Galaxy S8
+112: Samsung Galaxy S8 stock level: 6
+******************************
+ Stock Management Application 
+      App05: by Galimir
+******************************
+
+    Add:        Add a new product
+    Sell:       Sell a product
+    Search:     Search for a product
+    Deliver:    Deliver products
+    Remove:     Remove an old product
+    PrintAll:   Print all products
+    Stock:      Prints all products that are all low in stock
+    Quit:       Quit the program
+
+> 
+
+> sell
+Sell a product
+
+Please enter the product ID
+> 112
+Please enter the amount you would like to sell
+> -2
+112: Samsung Galaxy S8 stock level: 6
+An attempt made to sell a negative amount: -2 of this item Samsung Galaxy S8
+112: Samsung Galaxy S8 stock level: 6
+******************************
+ Stock Management Application 
+      App05: by Galimir
+******************************
+
+    Add:        Add a new product
+    Sell:       Sell a product
+    Search:     Search for a product
+    Deliver:    Deliver products
+    Remove:     Remove an old product
+    PrintAll:   Print all products
+    Stock:      Prints all products that are all low in stock
+    Quit:       Quit the program
+
+> search
+Search for a product by name
+
+Please enter the name of the product
+
+> Samsung
+112: Samsung Galaxy S8 stock level: 6
+
+******************************
+ Stock Management Application 
+      App05: by Galimir
+******************************
+
+    Add:        Add a new product
+    Sell:       Sell a product
+    Search:     Search for a product
+    Deliver:    Deliver products
+    Remove:     Remove an old product
+    PrintAll:   Print all products
+    Stock:      Prints all products that are all low in stock
+    Quit:       Quit the program
+
+> stock
+The stock of those products is low.
+111: Apple iPhone XS stock level: 0
+112: Samsung Galaxy S8 stock level: 0
+114: Apple iPhone 12 stock level: 0
+115: Apple iPhone 11 Pro stock level: 0
+116: Samsung Galaxy S20 stock level: 0
+117: Samsung Galaxy S10 stock level: 0
+118: Apple iPhone SE stock level: 0
+119: Apple MacBook Pro stock level: 0
+120: Apple iPhone 8 stock level: 0
+******************************
+ Stock Management Application 
+      App05: by Galimir
+******************************
+
+    Add:        Add a new product
+    Sell:       Sell a product
+    Search:     Search for a product
+    Deliver:    Deliver products
+    Remove:     Remove an old product
+    PrintAll:   Print all products
+    Stock:      Prints all products that are all low in stock
+    Quit:       Quit the program
+
+> 

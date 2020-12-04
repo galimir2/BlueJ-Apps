@@ -121,7 +121,12 @@ public class Product
      */
     public void sellOne(int amount)
     {
-        if(quantity >= amount && quantity > 0) 
+        if( amount < 0) 
+        {
+            System.out.println("An attempt made to sell a negative amount: " 
+                + amount + " of this item " + name);
+        }
+        else if(quantity >= amount && quantity > 0) 
         {
             quantity -= amount;
             System.out.println("You have sold" + amount + "of" + name);
