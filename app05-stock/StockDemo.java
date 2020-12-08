@@ -11,7 +11,7 @@ public class StockDemo
 {
     // The stock manager.
     private StockManager manager;
-   
+    //The random generator
     private Random generator;
 
     /**
@@ -36,6 +36,9 @@ public class StockDemo
         manager.addProduct(new Product(120, "Apple iPhone 8"));
     }
     
+    /**
+     * Runs the demo
+     */
     public void runDemo()
     {
         manager.printAllProducts();
@@ -63,6 +66,9 @@ public class StockDemo
         }
     }
 
+    /**
+     * This prints out the heading.
+     */
     public void printHeading(String verb)
     {
         System.out.println();
@@ -70,6 +76,9 @@ public class StockDemo
         System.out.println();
     }
     
+    /**
+     * Method to sell products.
+     */
     private void demoSell()
     {
         printHeading("Sell");

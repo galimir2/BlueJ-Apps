@@ -9,6 +9,7 @@
  */
 public class StockApp
 {
+    //All the choices that are added to the menu
     public static final char CLEAR_CODE = '\u000c';
     public static final String QUIT = "quit";
     public static final String ADD = "add";
@@ -82,6 +83,9 @@ public class StockApp
         }
     }
     
+    /**
+     * Method to add a product
+     */
     private void addProduct()
     {
         System.out.println("Adding new product\n");
@@ -113,7 +117,7 @@ public class StockApp
     }
     
     /**
-     * method to sell the product(s)
+     * The method used to sell a product
      */
     public void sellProduct()
     {
@@ -131,7 +135,7 @@ public class StockApp
     }
     
     /**
-     * Method to deliver the products
+     * Method to deliver any product by using the id of the item
      */
     public void deliverProduct()
     {
@@ -149,7 +153,8 @@ public class StockApp
     }
     
     /**
-     * This will show all the stock that has low levels.
+     * This will show all the stock that has low levels. 
+     * The stock that has low levels is all the products with less than 3 quantity
      */
     public void lowStock()
     {

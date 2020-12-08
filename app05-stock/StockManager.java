@@ -10,6 +10,7 @@ import java.io.IOException;
  */
 public class StockManager
 {
+    //Sets the first and last number of the ID for the items
     public static final int FIRST_ID = 111;
     public static final int LAST_ID = 130;
     // A list of the products.
