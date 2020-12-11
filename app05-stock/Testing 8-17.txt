@@ -105,7 +105,7 @@ Product has not been found!
     Quit:       Quit the program
 
 > deliver
-Sell a product
+Deliver a product
 
 Please enter the product ID
 > 112

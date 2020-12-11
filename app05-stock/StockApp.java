@@ -139,7 +139,7 @@ public class StockApp
      */
     public void deliverProduct()
     {
-        System.out.println("Sell a product\n");
+        System.out.println("Deliver a product\n");
 
         System.out.println("Please enter the product ID");
         String value = input.getString();
